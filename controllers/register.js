@@ -1,7 +1,7 @@
 
 const processRegister = (db, bcrypt) => (req, res) => {
 	const {email, name, password} = req.body;
-	if(!email || !name || !passwore){
+	if(!email || !name || !password){
 		return res.status(400).json('incorrect form submission');
 	}
 	var hash = bcrypt.hashSync(password);
