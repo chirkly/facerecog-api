@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res) => {res.send(database.users);});
+app.get('/', (req, res) => {res.send('it is working');});
 app.get('/profile/:id', profile.getProfile(db));
 app.post('/signin',signin.processSignIn(db, bcrypt));
 app.post('/register', register.processRegister(db, bcrypt));
